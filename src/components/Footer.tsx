@@ -53,7 +53,7 @@ const Footer = () => {
 
   const handleSocialClick = (platform: string) => {
     const socialLinks = {
-      'Facebook': '#', // Add your Facebook URL here
+      'Twitter(X)': '#', // Add your Facebook URL here
       'Instagram': 'https://www.instagram.com/nilebyte.ai',
       'LinkedIn': '#' // Add your LinkedIn URL here
     };
