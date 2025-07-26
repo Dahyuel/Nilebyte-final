@@ -53,9 +53,9 @@ const Footer = () => {
 
   const handleSocialClick = (platform: string) => {
     const socialLinks = {
-      'Twitter(X)': '#', // Add your Facebook URL here
+      'Twitter(X)': '#',
       'Instagram': 'https://www.instagram.com/nilebyte.ai',
-      'LinkedIn': '#' // Add your LinkedIn URL here
+      'LinkedIn': '#'
     };
     
     const url = socialLinks[platform as keyof typeof socialLinks];
