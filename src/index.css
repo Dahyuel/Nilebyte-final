@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom transition for footer links for smoother hover */
+.footer-link {
+    @apply transition-colors duration-200 ease-out;
+}
+
+html, body, #root {
+  background: #000 !important;
+  color-scheme: dark;
+}

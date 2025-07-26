@@ -1,0 +1,68 @@
+/* FAQ Styles */
+.faq-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 100%;
+  text-align: left;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  will-change: transform, box-shadow;
+}
+
+.faq-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
+}
+
+.faq-rectangle {
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity;
+  padding: 0.5rem 0;
+}
+
+.faq-item:hover .faq-rectangle {
+  opacity: 0.8;
+}
+
+.faq-question {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+  text-align: left;
+}
+
+.faq-icon {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.faq-item:hover .faq-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.faq-answer {
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  max-height: 0;
+}
+
+.faq-item.open {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.faq-item.open .faq-answer {
+  max-height: 200px;
+  padding-top: 1rem;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Remove any conflicting hover styles */
+.faq-item button:hover {
+  background: transparent !important;
+  backdrop-filter: none !important;
+} 

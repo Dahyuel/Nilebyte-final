@@ -1,0 +1,106 @@
+/* DynamicBlobBackground.css */
+
+.blob {
+  position: absolute;
+  border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
+  filter: blur(60px) brightness(0.5) saturate(1.8);
+  opacity: 0.6;
+  pointer-events: none;
+  background: linear-gradient(135deg, #00103A 0%, #101F60 50%, #2A4963 100%);
+  mix-blend-mode: normal;
+  will-change: transform, border-radius;
+}
+
+.blob1 {
+  width: 60vw;
+  height: 60vw;
+  top: -10vw;
+  left: -15vw;
+  animation: morph1 18s ease-in-out infinite alternate;
+  opacity: 0.6;
+}
+
+.blob2 {
+  width: 45vw;
+  height: 45vw;
+  bottom: -10vw;
+  right: -10vw;
+  animation: morph2 22s ease-in-out infinite alternate;
+  opacity: 0.6;
+}
+
+.blob3 {
+  width: 35vw;
+  height: 35vw;
+  top: 30vh;
+  left: 40vw;
+  animation: morph3 26s ease-in-out infinite alternate;
+  opacity: 0.6;
+}
+
+@keyframes morph1 {
+  0% {
+    border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
+    transform: scale(1) translate(0, 0) rotate(0deg);
+  }
+  33% {
+    border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
+    transform: scale(1.08, 0.95) translate(10vw, 2vw) rotate(10deg);
+  }
+  66% {
+    border-radius: 50% 60% 40% 60% / 60% 50% 60% 40%;
+    transform: scale(0.95, 1.1) translate(-8vw, -4vw) rotate(-8deg);
+  }
+  100% {
+    border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
+    transform: scale(1) translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes morph2 {
+  0% {
+    border-radius: 60% 40% 40% 60% / 60% 60% 40% 40%;
+    transform: scale(1) translate(0, 0) rotate(0deg);
+  }
+  40% {
+    border-radius: 50% 60% 60% 50% / 40% 50% 60% 60%;
+    transform: scale(1.1, 0.9) translate(-6vw, 8vw) rotate(12deg);
+  }
+  80% {
+    border-radius: 60% 50% 40% 60% / 60% 60% 50% 40%;
+    transform: scale(0.92, 1.12) translate(7vw, -6vw) rotate(-10deg);
+  }
+  100% {
+    border-radius: 60% 40% 40% 60% / 60% 60% 40% 40%;
+    transform: scale(1) translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes morph3 {
+  0% {
+    border-radius: 50% 50% 60% 40% / 60% 40% 50% 50%;
+    transform: scale(1) translate(0, 0) rotate(0deg);
+  }
+  30% {
+    border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
+    transform: scale(1.07, 0.93) translate(4vw, 6vw) rotate(8deg);
+  }
+  70% {
+    border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
+    transform: scale(0.93, 1.08) translate(-5vw, -7vw) rotate(-7deg);
+  }
+  100% {
+    border-radius: 50% 50% 60% 40% / 60% 40% 50% 50%;
+    transform: scale(1) translate(0, 0) rotate(0deg);
+  }
+}
+
+/* Darker override for Services section */
+.blob-bg-services .blob {
+  background: linear-gradient(135deg, #000A2F 0%, #101F60 50%, #2A4963 100%) !important;
+}
+
+/* Even darker override for ReadyToTransform section */
+.blob-bg-readytotransform .blob {
+  background: linear-gradient(135deg, #00051A 0%, #0A1440 50%, #1F3647 100%) !important;
+} 
