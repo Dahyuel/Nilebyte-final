@@ -51,6 +51,19 @@ const Footer = () => {
     window.open(url, '_blank');
   };
 
+  const handleSocialClick = (platform: string) => {
+    const socialLinks = {
+      'Facebook': '#', // Add your Facebook URL here
+      'Instagram': 'https://www.instagram.com/nilebyte.ai',
+      'LinkedIn': '#' // Add your LinkedIn URL here
+    };
+    
+    const url = socialLinks[platform as keyof typeof socialLinks];
+    if (url !== '#') {
+      openLink(url);
+    }
+  };
+
   return (
     <footer className="py-10 border-t border-white/10 relative bg-black">
       <div className="container mx-auto px-6 relative z-10">
@@ -86,7 +99,10 @@ const Footer = () => {
             <ul className="space-y-1.5">
               {['Facebook', 'Instagram', 'LinkedIn'].map((platform) => (
                 <li key={platform}>
-                  <button className="footer-link text-gray-400 hover:text-white font-light tracking-wide py-0.5 px-0 rounded transition-colors duration-200 block text-left text-sm">
+                  <button 
+                    onClick={() => handleSocialClick(platform)}
+                    className="footer-link text-gray-400 hover:text-white font-light tracking-wide py-0.5 px-0 rounded transition-colors duration-200 block text-left text-sm"
+                  >
                     {platform}
                   </button>
                 </li>
