@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Minus, Plus } from 'lucide-react';
 import { useScrollAnimation } from '../utils/scrollAnimations';
-import DynamicBlobBackground from '../components/DynamicBlobBackground';
 
 const faqs = [
   {
@@ -57,7 +56,6 @@ const FAQ: React.FC = () => {
       className="py-32 relative bg-black overflow-hidden"
       id="faq"
     >
-      <DynamicBlobBackground className="blob-bg-services" />
       <div className="absolute top-0 left-0 w-full h-20 z-10 pointer-events-none bg-gradient-to-b from-black/90 to-transparent" />
 
       <div className="container mx-auto px-6 relative z-10">
