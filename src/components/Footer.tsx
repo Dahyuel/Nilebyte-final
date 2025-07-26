@@ -97,7 +97,7 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-3 tracking-wide text-sm">Social</h3>
             <ul className="space-y-1.5">
-              {['Facebook', 'Instagram', 'LinkedIn'].map((platform) => (
+              {['Twitter(X)', 'Instagram', 'LinkedIn'].map((platform) => (
                 <li key={platform}>
                   <button 
                     onClick={() => handleSocialClick(platform)}
