@@ -1,3 +1,4 @@
+// ReadyToTransform.tsx - Now with DynamicBlobBackground
 import React, { useEffect, useRef } from 'react';
 import { Phone, MessageCircle } from 'lucide-react';
 import { useChatBot } from '../contexts/ChatBotContext';
@@ -12,7 +13,6 @@ const ReadyToTransform = () => {
   const textRef = useRef<HTMLParagraphElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
 
-
   useEffect(() => {
     const elementsToAnimate = [
         titleRef.current,
@@ -23,7 +23,9 @@ const ReadyToTransform = () => {
   }, [observeElements]);
 
   return (
-    <section id="readytotransform" ref={sectionRef} className="py-32 relative bg-black overflow-hidden">
+    <section id="readytotransform" ref={sectionRef} className="py-32 relative bg-transparent overflow-hidden">
+      <DynamicBlobBackground className="blob-bg-services" />
+      <div className="absolute top-0 left-0 w-full h-20 z-10 pointer-events-none bg-gradient-to-b from-black/90 to-transparent" />
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center">
           <h2 ref={titleRef} className="scroll-animate text-4xl md:text-5xl font-bold mb-6 text-white tracking-wide">
@@ -34,7 +36,6 @@ const ReadyToTransform = () => {
           <p ref={textRef} className="scroll-animate text-lg font-light text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed tracking-wide">
             Let's discuss how AI can revolutionize your operations and drive unprecedented growth for your company.
           </p>
-
           <div ref={buttonsRef} className="scroll-animate flex flex-col sm:flex-row gap-4 justify-center items-center stagger-children">
             <button
               onClick={() => openChat('Book A Call')}
@@ -53,6 +54,7 @@ const ReadyToTransform = () => {
           </div>
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 w-full h-20 z-10 pointer-events-none bg-gradient-to-t from-black/90 to-transparent" />
     </section>
   );
 };
