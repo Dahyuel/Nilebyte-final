@@ -72,7 +72,7 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-3 tracking-wide text-sm">Pages</h3>
             <ul className="space-y-1.5">
-              {['home', 'about', 'services', 'pricing', 'contact', 'faq'].map((section) => (
+              {['home', 'about', 'services', 'contact', 'faq'].map((section) => (
                 <li key={section}>
                   <button 
                     onClick={() => scrollToSection(section)} 
