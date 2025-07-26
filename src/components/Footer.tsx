@@ -47,13 +47,8 @@ const Footer = () => {
     }
   };
 
-  const downloadPDF = (filename: string) => {
-    const link = document.createElement('a');
-    link.href = `/public/${filename}`;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const openLink = (url: string) => {
+    window.open(url, '_blank');
   };
 
   return (
@@ -132,13 +127,13 @@ const Footer = () => {
           </p>
           <div className="flex items-center space-x-4 mt-2 md:mt-0">
             <button 
-              onClick={() => downloadPDF('Terms & Conditions - NileByte.pdf')}
+              onClick={() => openLink('https://drive.google.com/file/d/1kGjcRMzJj_wOlWLJJxHzQ22GDhvn4KGu/view?usp=sharing')}
               className="footer-link text-gray-400 hover:text-white font-light tracking-wide text-xs px-2 py-0.5 rounded transition-colors duration-200"
             >
               Terms & Conditions
             </button>
             <button 
-              onClick={() => downloadPDF('Privacy Policy - NileByte.pdf')}
+              onClick={() => openLink('https://drive.google.com/file/d/1f-CviNxaUSM91vV6i8UZx-SXjiya6sjy/view?usp=sharing')}
               className="footer-link text-gray-400 hover:text-white font-light tracking-wide text-xs px-2 py-0.5 rounded transition-colors duration-200"
             >
               Privacy Policy
