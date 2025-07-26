@@ -55,7 +55,7 @@ const Footer = () => {
     const socialLinks = {
       'Twitter(X)': 'https://x.com/NilebyteAi',
       'Instagram': 'https://www.instagram.com/nilebyte.ai',
-      'LinkedIn': '#'
+      'LinkedIn': 'https://www.linkedin.com/company/nilebyte'
     };
     
     const url = socialLinks[platform as keyof typeof socialLinks];
