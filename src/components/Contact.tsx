@@ -40,7 +40,10 @@ const Contact = () => {
                 <p className="text-gray-400 font-light tracking-wide">+20 1022053999</p>
               </div>
             </div>
-            <div className="unified-card flex items-center bg-white/5 border border-white/10 rounded-2xl p-6 group">
+            <button 
+              onClick={() => window.location.href = 'mailto:support@nilebyte.info'}
+              className="unified-card flex items-center bg-white/5 border border-white/10 rounded-2xl p-6 group cursor-pointer"
+            >
               <div className="w-12 h-12 rounded-lg flex items-center justify-center mr-4 card-icon dynamic-gradient-icon">
                 <Mail className="w-6 h-6 text-white" />
               </div>
@@ -48,7 +51,7 @@ const Contact = () => {
                 <p className="text-white font-semibold tracking-wide">Email Us</p>
                 <p className="text-gray-400 font-light tracking-wide">support@nilebyte.info</p>
               </div>
-            </div>
+            </button>
             <div className="unified-card flex items-center bg-white/5 border border-white/10 rounded-2xl p-6 group">
               <div className="w-12 h-12 rounded-lg flex items-center justify-center mr-4 card-icon dynamic-gradient-icon">
                 <MapPin className="w-6 h-6 text-white" />
