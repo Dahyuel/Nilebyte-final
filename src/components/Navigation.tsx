@@ -98,7 +98,7 @@ const Navigation = () => {
         <div className="flex flex-shrink-0 items-end pb-1">
           <button onClick={scrollToHome} className="flex items-center mt-1">
             <img 
-              src="/Nilebyte logo.png" 
+              src="/trans logo.png" 
               alt="NileByte Logo" 
               className="h-14 md:h-12 lg:h-14 xl:h-16 w-auto"
             />
@@ -142,7 +142,7 @@ const Navigation = () => {
         {/* Mobile Menu Button (right) */}
         <button
           onClick={() => setShowMobileMenu(!showMobileMenu)}
-          className="sm:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200 ml-auto mr-0"
+          className="sm:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200 ml-auto"
         >
           {showMobileMenu ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
