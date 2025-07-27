@@ -92,7 +92,7 @@ const Navigation = () => {
   }, [location.pathname]);
 
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-black/30 backdrop-blur-xl border border-white/5 rounded-full hover-glow w-full max-w-sm md:max-w-fit px-4 md:px-6 mx-auto">
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-black/30 backdrop-blur-xl border border-white/5 rounded-full hover-glow w-full max-w-sm md:max-w-fit px-4 md:px-6 mx-4 md:mx-auto">
       <div className="flex items-center h-16 w-full">
         {/* Logo (left) */}
         <div className="flex flex-shrink-0 items-end pb-1">
