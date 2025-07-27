@@ -93,7 +93,7 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-black/30 backdrop-blur-xl border border-white/5 rounded-full hover-glow w-full max-w-sm md:max-w-fit px-4 md:px-6 mx-4 md:mx-0">
-      <div className="flex items-center h-16 w-full">
+      <div className="flex items-center justify-between h-16 w-full">
         {/* Logo (left) */}
         <div className="flex flex-shrink-0 items-end pb-1">
           <button onClick={scrollToHome} className="flex items-center mt-1">
@@ -106,7 +106,7 @@ const Navigation = () => {
         </div>
 
         {/* Desktop Nav Items - Show on large screens */}
-        <div className="hidden xl:flex items-center space-x-6 ml-8">
+        <div className="hidden xl:flex items-center space-x-6">
           {navItems.map((item) => (
             <button
               key={item.id}
@@ -123,7 +123,7 @@ const Navigation = () => {
         </div>
 
         {/* Tablet Nav Items - Responsive scaling from large to mobile */}
-        <div className="hidden sm:flex xl:hidden items-center space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-4 xl:space-x-5 ml-2 sm:ml-3 md:ml-4 lg:ml-6 xl:ml-7">
+        <div className="hidden sm:flex xl:hidden items-center space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-4 xl:space-x-5">
           {navItems.map((item) => (
             <button
               key={item.id}
@@ -140,12 +140,14 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Menu Button (right) */}
-        <button
-          onClick={() => setShowMobileMenu(!showMobileMenu)}
-          className="sm:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200 ml-auto"
-        >
-          {showMobileMenu ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        <div className="sm:hidden flex flex-shrink-0">
+          <button
+            onClick={() => setShowMobileMenu(!showMobileMenu)}
+            className="p-2 text-gray-300 hover:text-white transition-colors duration-200"
+          >
+            {showMobileMenu ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu - Fixed positioning and better styling */}
