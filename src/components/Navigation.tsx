@@ -92,8 +92,8 @@ const Navigation = () => {
   }, [location.pathname]);
 
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-black/30 backdrop-blur-xl border border-white/5 rounded-full hover-glow w-full max-w-sm md:max-w-fit px-4 md:px-6 mx-4 md:mx-0">
-      <div className="flex items-center justify-between h-16 w-full">
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-black/30 backdrop-blur-xl border border-white/5 rounded-full hover-glow w-full max-w-sm md:max-w-fit px-4 md:px-6 mx-auto">
+      <div className="flex items-center h-16 w-full">
         {/* Logo (left) */}
         <div className="flex flex-shrink-0 items-end pb-1">
           <button onClick={scrollToHome} className="flex items-center mt-1">
@@ -142,7 +142,7 @@ const Navigation = () => {
         {/* Mobile Menu Button (right) */}
         <button
           onClick={() => setShowMobileMenu(!showMobileMenu)}
-          className="sm:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
+          className="sm:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200 ml-auto"
         >
           {showMobileMenu ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
