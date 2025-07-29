@@ -183,8 +183,7 @@ const ChatBot = () => {
       const response = await fetch('https://dahyzz.app.n8n.cloud/webhook/f8ab566a-82d4-44a5-b536-7e2a02a970c3/chat', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Basic ' + btoa('Nilebyte:Nileebytee')
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           chatInput: message,
