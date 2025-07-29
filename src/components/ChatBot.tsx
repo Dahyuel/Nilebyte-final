@@ -13,6 +13,7 @@ interface N8nResponse {
   message?: string;
   response?: string;
   timestamp?: string;
+  output?: string; // Added this field
   parsedResponse?: {
     response?: string;
     message?: string;
@@ -96,12 +97,18 @@ const ChatBot = () => {
     // Handle the new response format with output field
     if (Array.isArray(responseData) && responseData.length > 0) {
       const firstItem = responseData[0];
+      // Check for output field first
       if (firstItem.output) {
         return firstItem.output;
       }
     }
     
     const data = Array.isArray(responseData) ? responseData[0] : responseData;
+    
+    // Check for output field in single response
+    if (data?.output) {
+      return data.output;
+    }
     
     // Check for different possible response structures
     if (data?.parsedResponse?.response) {
