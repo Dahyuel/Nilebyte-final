@@ -184,7 +184,7 @@ const ChatBot = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Basic ' + btoa('Nilebyte:Nilebyte')
+          'Authorization': 'Basic ' + btoa('Nilebyte:Nileebytee')
         },
         body: JSON.stringify({
           chatInput: message,
