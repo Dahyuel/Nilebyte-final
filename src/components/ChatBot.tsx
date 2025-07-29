@@ -93,6 +93,14 @@ const ChatBot = () => {
   }, []);
 
   const extractResponseMessage = (responseData: N8nResponse | N8nResponse[]): string => {
+    // Handle the new response format with output field
+    if (Array.isArray(responseData) && responseData.length > 0) {
+      const firstItem = responseData[0];
+      if (firstItem.output) {
+        return firstItem.output;
+      }
+    }
+    
     const data = Array.isArray(responseData) ? responseData[0] : responseData;
     
     // Check for different possible response structures
@@ -172,11 +180,11 @@ const ChatBot = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://dahyzz.app.n8n.cloud/webhook/911243ee-72f2-4da5-b523-a542e5e54d90/chat', {
+      const response = await fetch('https://dahyzz.app.n8n.cloud/webhook/f8ab566a-82d4-44a5-b536-7e2a02a970c3/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Basic ' + btoa('nilebyte:nilebytee')
+          'Authorization': 'Basic ' + btoa('Nilebyte:Nileebytee')
         },
         body: JSON.stringify({
           chatInput: message,
@@ -209,6 +217,19 @@ const ChatBot = () => {
       }]);
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      if (e.shiftKey) {
+        // Allow default behavior for shift+enter (new line)
+        return;
+      } else {
+        // Prevent default and send message
+        e.preventDefault();
+        sendMessage();
+      }
     }
   };
 
@@ -311,7 +332,7 @@ const ChatBot = () => {
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
+                onKeyDown={handleKeyPress}
                 placeholder="Ask about AI automation..."
                 className="flex-1 bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 text-sm transition-colors duration-200"
                 disabled={isLoading}
