@@ -31,7 +31,12 @@ const Contact = () => {
                         </p>
                     </div>
                     <div ref={gridRef} className="flex flex-col md:flex-row justify-center gap-8 max-w-4xl mx-auto stagger-children scroll-animate">
-                        <div className="unified-card flex items-center bg-white/5 border border-white/10 rounded-2xl p-6 group">
+                        <a 
+                            href="https://wa.me/201034877123"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="unified-card flex items-center bg-white/5 border border-white/10 rounded-2xl p-6 group hover:bg-white/10 transition-all duration-300 cursor-pointer"
+                        >
                             <div className="w-12 h-12 rounded-lg flex items-center justify-center mr-4 card-icon dynamic-gradient-icon">
                                 <Phone className="w-6 h-6 text-white" />
                             </div>
@@ -39,7 +44,7 @@ const Contact = () => {
                                 <p className="text-white font-semibold tracking-wide">Call Us</p>
                                 <p className="text-gray-400 font-light tracking-wide">+20 1034877123</p>
                             </div>
-                        </div>
+                        </a>
                         
                         <a 
                             href="mailto:support@nilebyte.info"
