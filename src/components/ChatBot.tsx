@@ -187,10 +187,14 @@ const ChatBot = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://dahyzz.app.n8n.cloud/webhook/f8ab566a-82d4-44a5-b536-7e2a02a970c3/chat', {
+      // Encode credentials in base64 for Basic Auth
+      const credentials = btoa('ahmeddahy:dahyn8n');
+      
+      const response = await fetch('https://vpncsss.app.n8n.cloud/webhook/f8ab566a-82d4-44a5-b536-7e2a02a970c3/chat', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Authorization': `Basic ${credentials}`
         },
         body: JSON.stringify({
           chatInput: message,
