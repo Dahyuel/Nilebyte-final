@@ -85,16 +85,9 @@ const Pricing = () => {
             <div
               key={index}
               className={`unified-card relative p-8 bg-white/5 border border-white/10 rounded-2xl group ${
-                plan.popular ? 'ring-2 ring-blue-400/50' : ''
+                ''
               }`}
             >
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-[#0052D4] via-[#4364F7] to-[#6FB1FC] text-white px-4 py-1 rounded-full text-sm font-medium">
-                    Most Popular
-                  </span>
-                </div>
-              )}
               
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-white mb-4 tracking-wide">{plan.name}</h3>
@@ -118,17 +111,6 @@ const Pricing = () => {
                   </div>
                 ))}
               </div>
-
-              <button
-                onClick={() => openChat(`I'm interested in the ${plan.name} plan`)}
-                className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
-                  plan.popular
-                    ? 'gradient-cta-btn text-white'
-                    : 'white-cta-btn text-white'
-                }`}
-              >
-                Get Started
-              </button>
             </div>
           ))}
         </div>
