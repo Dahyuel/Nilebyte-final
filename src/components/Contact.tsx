@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { useScrollAnimation } from '../utils/scrollAnimations';
+import DynamicBlobBackground from './DynamicBlobBackground';
 
 const Contact = () => {
     const { observeElements } = useScrollAnimation();
@@ -20,6 +21,8 @@ const Contact = () => {
 
     return (
         <section id="contact" ref={sectionRef} className="py-32 relative bg-black overflow-hidden">
+            <DynamicBlobBackground className="blob-bg-services" />
+            <div className="absolute top-0 left-0 w-full h-20 z-10 pointer-events-none bg-gradient-to-b from-black/90 to-transparent" />
             <div className="container mx-auto px-6 relative z-10">
                 <div>
                     <div className="text-center mb-16">
@@ -71,6 +74,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+            <div className="absolute bottom-0 left-0 w-full h-20 z-10 pointer-events-none bg-gradient-to-t from-black/90 to-transparent" />
         </section>
     );
 };

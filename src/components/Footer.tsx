@@ -53,7 +53,7 @@ const Footer = () => {
 
   const handleSocialClick = (platform: string) => {
     const socialLinks = {
-      'Twitter(X)': 'https://x.com/NilebyteAi',
+      'Facebook': 'https://www.facebook.com/share/1Aubnye2La/?mibextid=wwXIfr',
       'Instagram': 'https://www.instagram.com/nilebyte.ai',
       'LinkedIn': 'https://www.linkedin.com/company/nilebyte'
     };
@@ -80,7 +80,7 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-3 tracking-wide text-sm">Pages</h3>
             <ul className="space-y-1.5">
-              {['home', 'about', 'services', 'contact', 'faq'].map((section) => (
+              {['home', 'about', 'services', 'pricing', 'faq', 'contact'].map((section) => (
                 <li key={section}>
                   <button 
                     onClick={() => scrollToSection(section)} 
@@ -97,7 +97,7 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-3 tracking-wide text-sm">Social</h3>
             <ul className="space-y-1.5">
-              {['Twitter(X)', 'Instagram', 'LinkedIn'].map((platform) => (
+              {['Facebook', 'Instagram', 'LinkedIn'].map((platform) => (
                 <li key={platform}>
                   <button 
                     onClick={() => handleSocialClick(platform)}

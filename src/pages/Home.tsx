@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Services from '../components/Services';
+import Pricing from '../components/Pricing';
 import FAQ from '../components/FAQ';
 import ReadyToTransform from '../components/ReadyToTransform';
 import Contact from '../components/Contact';
@@ -37,6 +38,7 @@ function Home() {
           <Hero />
           <About />
           <Services />
+          <Pricing />
           <FAQ />
           <ReadyToTransform />
           <Contact />
